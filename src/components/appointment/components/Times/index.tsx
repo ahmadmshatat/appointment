@@ -1,14 +1,11 @@
 import moment from 'moment';
 import cls from "classnames";
-
+import { TimesProps } from "./types";
 import styles from "./times.module.scss";
 
 
 
-const Times = ({ times, onSelectTime, selectedTime }: { onSelectTime: (args: {
-    from_unix: number,
-    to_unix: number
-}) => void, selectedTime: { from_unix: number, to_unix: number } | null ,  times: {from_unix: number, to_unix: number, isUnAvailable?: Boolean}[] | undefined }) => {
+const Times = ({ times, onSelectTime, selectedTime, selectedDay }: TimesProps) => {
     
     return (
         <div className={styles.timesWrapper}>
@@ -16,6 +13,8 @@ const Times = ({ times, onSelectTime, selectedTime }: { onSelectTime: (args: {
                 Choose time
             </div>
             <div className={styles.times}>
+                {!selectedDay && <div className={styles.note}>Please select day to view available times</div>}
+                {selectedDay && !times?.length && <div className={styles.note}>No times at this day</div>}
                 {times?.map((time: { from_unix: number, to_unix: number, isUnAvailable?: Boolean }, index: number) =>{
                     const timeClassName = cls(styles.time, {
                         [styles.inActive]: time.isUnAvailable,

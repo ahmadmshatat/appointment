@@ -25,6 +25,10 @@
       .active {
          @include Active;
       }
+      .note {
+         opacity: 0.5;
+         font-size: $sm-font-size;
+      }
    }
  
 }
