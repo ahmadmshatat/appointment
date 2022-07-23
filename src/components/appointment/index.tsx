@@ -84,6 +84,7 @@ const Appointment = () => {
                     onSelectTime={onSelectTime}
                     times={getTimes} 
                     selectedTime={selectedTime}
+                    selectedDay={selectedDay?.date}
                 />
             </div>
             <button onClick={handleBooking} className={cls(styles.bookBtn, {
