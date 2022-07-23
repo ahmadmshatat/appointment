@@ -1,0 +1,41 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+
+.scheduale {
+
+   // width: 280px;
+
+   .headline {
+      font-size: $md-font-size;
+      font-family: $font-family-black;
+      padding: 12px 0;
+   }
+   .dayCellWrapper {
+      .dayCell {
+         min-height: 59px;
+         margin: 5px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         gap: 3px;
+         border-radius: 10px;
+         @include BoxShadow;
+         cursor: pointer;
+         div {
+            font-size: $xs-font-size;
+         }
+         .day {
+            font-family: $font-family-black;
+         }
+      }
+      .activeDate {
+         background-color: rgba(72, 148, 254, 1);
+         color: #fff;
+      }
+      .inActive {
+         opacity: 0.3;
+         pointer-events: none;
+      }
+   }
+}

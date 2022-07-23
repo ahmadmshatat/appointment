@@ -1,0 +1,30 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+.timesWrapper {
+   padding: 18px 0;
+   .headline {
+      font-size: $md-font-size;
+      font-family: $font-family-black;
+   }
+   .times {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      padding: 12px 0;
+      .time {
+         background: #FFFFFF;         
+         border-radius: 10px;
+         padding: 9px 8px;
+         font-size: $sm-font-size;
+         cursor: pointer;
+         @include BoxShadow;
+      }
+      .inActive {
+         @include InActive;
+      }
+      .active {
+         @include Active;
+      }
+   }
+ 
+}

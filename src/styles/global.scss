@@ -1,0 +1,25 @@
+   @font-face {
+       font-family: 'Lato';
+       src: url('../assets/fonts/Lato.eot');
+       src: url('../assets/fonts/Lato.eot?#iefix') format('embedded-opentype'),
+           url('../assets/fonts/Lato.woff') format('woff'),
+           url('../assets/fonts/Lato.ttf') format('truetype');
+       font-weight: normal;
+       font-style: normal;
+   }
+   @font-face {
+       font-family: 'Lato-Black';
+       src: url('../assets/fonts/Lato-Black.eot');
+       src: url('../assets/fonts/Lato-Black.eot?#iefix') format('embedded-opentype'),
+           url('../assets/fonts/Lato-Black.woff') format('woff'),
+           url('../assets/fonts/Lato-Black.ttf') format('truetype');
+       font-weight: normal;
+       font-style: normal;
+   }
+    
+   @import "./reset";
+   @import "./variables";
+
+   body {
+    font-family: 'Lato', "helvetica neue", Arial, sans-serif;
+   }

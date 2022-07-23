@@ -1,0 +1,29 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+
+.appointmentWrapper {
+   .appointment {
+      width: 357px;
+      border: 1px solid #E1E1E1;
+      border-radius: 10px;
+      padding: 26px 40px;
+      @media (max-width: $screen-width-sm) {
+         width: 250px;
+      }
+   }
+
+   .bookBtn {
+      background: #4894FE;
+      border-radius: 14px;
+      padding: 17px;
+      width: 100%;
+      border: none;
+      color: #fff;
+      margin-top: 20px;
+      cursor: pointer;
+   }
+   .inActive {
+      @include InActive;
+   }
+}
