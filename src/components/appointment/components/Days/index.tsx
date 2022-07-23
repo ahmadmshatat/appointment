@@ -24,7 +24,7 @@ const Days = ({ schedule, selectedDay, onSelectDay }: DaysProps) => {
         slidesToScroll: 6,
         initialSlide: 0,
         nextArrow: <Arrow />,
-        prevArrow: <Arrow />,
+        prevArrow: <Arrow isPrev={true} />,
         responsive: [
             {
                 breakpoint: 1024,

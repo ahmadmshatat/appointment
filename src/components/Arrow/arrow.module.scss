@@ -1,3 +1,6 @@
 div.customArrow::before {
     content: url('../../assets/images/nextArrow.svg');
 }
+div.prevArrow::before {
+    content: url('../../assets/images/prevArrow.svg');
+}
